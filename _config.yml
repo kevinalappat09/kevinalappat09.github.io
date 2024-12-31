@@ -1,0 +1,38 @@
+title: Kevin Alappat
+email: kevin.d.alappat@gmail.com
+description: >-
+  CS major writing about his projects and learning.
+baseurl: ""
+url: "https://kevinalappat09.github.io/"
+
+author:
+  name: "Kevin Alappat"
+  email: "kevin.d.alappat@gmail.com"
+
+social_links:
+  github: "https://github.com/kevinalappat09"
+  linkedin: "https://www.linkedin.com/in/kevin-alappat-47b87a157/"
+
+permalink: "/:categories/:title/"
+
+language: "en"
+
+exclude:
+  - "README.md"
+  - "LICENSE"
+  - "node_modules"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+highlighter: rouge
+
+sitemap: true
+
+collections:
+  posts:
+    output: true 
+
+theme: minima
