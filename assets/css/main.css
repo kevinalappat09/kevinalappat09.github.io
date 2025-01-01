@@ -1,0 +1,36 @@
+/* Dark theme styling */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  a {
+    color: #1a73e8;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 0.8em;
+  }
+  
+  header {
+    padding: 1em 0;
+  }
+  
