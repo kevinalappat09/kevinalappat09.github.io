@@ -1,31 +1,21 @@
 ---
 layout: default
-title: "Welcome to My Blog"
+title: Home
 ---
 
-<h1 class="text-4xl font-bold text-center mb-8">Welcome to My Blog</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {% assign projects = site.posts | group_by_exp:"post", "post.project.title" %}
 
-<!-- Categories Section -->
-<h2 class="text-3xl font-semibold text-white mb-4">Categories</h2>
-<div class="space-y-8">
-  {% assign categories = site.categories %}
-  
-  <!-- Loop through each category -->
-  {% for category in categories %}
-    <div class="category-section">
-      <h3 class="text-2xl font-bold text-white">{{ category[0] }}</h3>
-      <ul class="space-y-4">
-        
-        <!-- Loop through posts in each category -->
-        {% for post in category[1] %}
-          <li>
-            <a href="{{ post.url | relative_url }}" class="text-lg text-gray-300 hover:text-gray-400">
-              {{ post.title }}
-            </a>
-            <p class="text-sm text-gray-500">{{ post.date | date: "%B %d, %Y" }}</p>
-          </li>
+  {% for project in projects %}
+    {% assign project_data = project.items[0].project %}
+    <section class="py-6 px-4 rounded-lg">
+      <h3 class="text-lg font-roboto underline" style="color: #171717; text-decoration-color: #171717"><span class="px-2" style="background-color: {{ project_data.color }};">{{ project_data.title }}</span></h3>
+      <p class="text-sm font-open-sans italic" style="color:#d4d4d4">{{ project_data.description }}</p>
+      <ul class="hyphen-list mt-2">
+        {% for post in project.items %}
+          <li><a href="{{ post.url }}" class="text-white hover:text-gray-300">{{ post.title }}</a></li>
         {% endfor %}
       </ul>
-    </div>
+    </section>
   {% endfor %}
 </div>

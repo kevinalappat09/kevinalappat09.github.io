@@ -25,7 +25,7 @@ body {
   }
   
   footer {
-    margin-top: 2em;
+    margin-top: auto;
     text-align: center;
     font-size: 0.8em;
   }
@@ -33,4 +33,19 @@ body {
   header {
     padding: 1em 0;
   }
-  
+
+    ul.hyphen-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul.hyphen-list li::before {
+      content: "- "; /* Adds a hyphen before each list item */
+      color: white; /* You can change the color */
+    }
+
+    .main-content {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+    }

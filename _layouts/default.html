@@ -23,8 +23,8 @@
 
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 </head>
-<body class="bg-black text-white">
-  <header class="bg-gray-900 p-4">
+<body class="bg-[#171717] text-white px-64">
+  <header class="bg-[#171717] p-4">
     <nav class="flex justify-between items-center">
       <a class="text-2xl font-bold text-white hover:text-gray-400" href="{{ "/" | absolute_url }}">{{ site.title }}</a>
       <ul class="flex space-x-4">
@@ -35,11 +35,11 @@
     </nav>
   </header>
   
-  <main class="container mx-auto p-6">
+  <main class="main-content container mx-auto p-6">
     {{ content }}
   </main>
 
-  <footer class="bg-gray-900 text-center p-4">
+  <footer class="bg-[#171717] text-center p-4">
     <p>{{ site.title }}</p>
   </footer>
 </body>
