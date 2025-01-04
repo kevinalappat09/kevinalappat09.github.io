@@ -1,51 +1,70 @@
-/* Dark theme styling */
+
 body {
-    background-color: #121212;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 2em;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #f1f1f1;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  a {
-    color: #1a73e8;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  footer {
-    margin-top: auto;
-    text-align: center;
-    font-size: 0.8em;
-  }
-  
-  header {
-    padding: 1em 0;
-  }
+  background-color: #121212;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
 
-    ul.hyphen-list {
-      list-style-type: none;
-      padding-left: 0;
-    }
+.content p {
+  margin-bottom: 1.5em;
+  font-size: 1.25em;
+  font-family: 'Open Sans', sans-serif;
+}
 
-    ul.hyphen-list li::before {
-      content: "- "; /* Adds a hyphen before each list item */
-      color: white; /* You can change the color */
-    }
+.content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  font-family: 'Roboto', sans-serif;
+}
 
-    .main-content {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-    }
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #1a73e8;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+header {
+  padding: 1em 0;
+}
+
+ul.hyphen-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.hyphen-list li::before {
+  content: "- ";
+  color: white;
+}
+
+.main-content {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+

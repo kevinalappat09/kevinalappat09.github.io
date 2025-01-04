@@ -12,7 +12,7 @@ social_links:
   github: "https://github.com/kevinalappat09"
   linkedin: "https://www.linkedin.com/in/kevin-alappat-47b87a157/"
 
-permalink: "/:categories/:title/"
+permalink: "/:title/"
 
 language: "en"
 
@@ -26,6 +26,8 @@ plugins:
   - jekyll-seo-tag
 
 markdown: kramdown
+kramdown:
+  input: GFM
 highlighter: rouge
 
 sitemap: true
