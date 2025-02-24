@@ -3,4 +3,4 @@ layout: default
 title: About
 ---
 
-### Check Out My Projects - 
+System design and software architecture enthusiast. 
