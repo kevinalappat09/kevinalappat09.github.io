@@ -26,9 +26,11 @@ plugins:
   - jekyll-seo-tag
 
 markdown: kramdown
+highlighter: null
 kramdown:
   input: GFM
-highlighter: rouge
+
+
 
 sitemap: true
 

@@ -1,7 +1,7 @@
 
 body {
   background-color: #121212;
-  color: white;
+  /* color: white; */
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -68,3 +68,12 @@ ul.hyphen-list li::before {
   flex-direction: column;
 }
 
+h1 {
+  font-size: 24px;
+}
+
+.highlight pre {
+  background-color: oklch(37% 0.013 285.805);
+  padding: 16px;
+  border-radius: 16px;
+}
