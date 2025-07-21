@@ -37,6 +37,9 @@ sitemap: true
 collections:
   posts:
     output: true 
+  learnlogs:
+    output: true
+    permalink: /learnlog/:path/
 
 defaults:
   - scope:
