@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,36 +13,40 @@
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
 
   <!-- Prism.js line numbers plugin CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.css"
+    rel="stylesheet" />
 
   <!-- Prism.js line numbers plugin JS -->
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
-  
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@700&display=swap"
+    rel="stylesheet">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'YOUR-GA-ID');
   </script>
 
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
 </head>
+
 <body class="bg-[#171717] text-white font-sans">
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-32">
-    <header class="bg-[#171717] py-6">
+    <!-- <header class="bg-[#171717] py-6">
       <nav class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
         <a class="text-3xl font-bold text-white hover:text-gray-400" href="{{ "/" | absolute_url }}">{{ site.title }}</a>
         <ul class="flex flex-wrap justify-center sm:justify-end gap-4">
@@ -51,22 +56,23 @@
           <li><a href="{{ "/feed.xml" | absolute_url }}" class="text-white hover:text-gray-400">RSS</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
     <main class="py-8">
       {{ content }}
     </main>
 
-    <footer class="bg-[#171717] text-center py-6">
+    <!-- <footer class="bg-[#171717] text-center py-6">
       <p class="text-sm text-gray-400">{{ site.title }}</p>
-    </footer>
+    </footer> -->
   </div>
 
   <script>
-  document.querySelectorAll('pre > code').forEach((block) => {
-    block.parentElement.classList.add('line-numbers');
-  });
-</script>
+    document.querySelectorAll('pre > code').forEach((block) => {
+      block.parentElement.classList.add('line-numbers');
+    });
+  </script>
 
 </body>
+
 </html>
