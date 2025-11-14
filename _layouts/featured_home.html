@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="home">
+    {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+    {%- endif -%}
+
+    {{ content }}
+
+    {% if site.featured_posts.size > 0 %}
+    <h2 class="post-list-heading">Featured Posts</h2>
+    <ul class="post-list">
+        {% for post_filename in site.featured_posts %}
+        {% assign featured_post = site.posts | where: "path", post_filename | first %}
+        {% if featured_post %}
+        <li>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ featured_post.date | date: date_format }}</span>
+            <h3>
+                <a class="post-link" href="{{ featured_post.url | relative_url }}">
+                    {{ featured_post.title | escape }}
+                </a>
+            </h3>
+            {%- if site.show_excerpts -%}
+            {{ featured_post.excerpt }}
+            {%- endif -%}
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>

@@ -2,77 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
+    <meta charset="utf-8">
 
-  <!-- Prism.js CSS for code highlighting -->
-  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Prism.js core script -->
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <title>{{ site.title | escape }}</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
 
-  <!-- Prism.js line numbers plugin CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.css"
-    rel="stylesheet" />
+    <!-- Minima or theme CSS -->
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 
-  <!-- Prism.js line numbers plugin JS -->
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <!-- Your custom stylesheet -->
+    <!-- <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">  -->
 
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@700&display=swap"
-    rel="stylesheet">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'YOUR-GA-ID');
-  </script>
-
-  <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
+    {{ head }} <!-- Allows additional includes -->
 </head>
 
-<body class="bg-[#171717] text-white font-sans">
+<body>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-32">
-    <!-- <header class="bg-[#171717] py-6">
-      <nav class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-        <a class="text-3xl font-bold text-white hover:text-gray-400" href="{{ "/" | absolute_url }}">{{ site.title }}</a>
-        <ul class="flex flex-wrap justify-center sm:justify-end gap-4">
-          <li><a href="{{ "/" | absolute_url }}" class="text-white hover:text-gray-400">Home</a></li>
-          <li><a href="{{ "/about/" | absolute_url }}" class="text-white hover:text-gray-400">About</a></li>
-          <li><a href="{{ "/learnlog/" | absolute_url }}" class="text-white hover:text-gray-400">Learn Log</a></li>
-          <li><a href="{{ "/feed.xml" | absolute_url }}" class="text-white hover:text-gray-400">RSS</a></li>
-        </ul>
-      </nav>
-    </header> -->
+    <!-- Site header -->
+    {% include header.html %}
 
-    <main class="py-8">
-      {{ content }}
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
     </main>
-
-    <!-- <footer class="bg-[#171717] text-center py-6">
-      <p class="text-sm text-gray-400">{{ site.title }}</p>
-    </footer> -->
-  </div>
-
-  <script>
-    document.querySelectorAll('pre > code').forEach((block) => {
-      block.parentElement.classList.add('line-numbers');
-    });
-  </script>
-
 </body>
-
-</html>
