@@ -10,6 +10,13 @@ Suppose you have a primary server that handles your requests and a failover back
 
 But what happens when the primary is still healthy but the network over which the heartbeats are sent is down. The backup now thinks that the primary is down and assumes the role of primary. This leads to inconsistencies as both servers are now acting and serving requests as the primary. This problem is commonly known as the Split Brain Problem.
 
+<div style="text-align: center;">
+  <img src="/assets/images/SplitBrain/Primary_Backup.png" alt="Three scenarios" width="500">
+  <p style="font-style: italic; font-size: 0.9em;">Figure 1: Three scenarios — 1. Healthy Primary, 2. Primary down, 3. Network partition</p>
+</div>
+
+
+
 # Consequences of a Split Brain
 Split brain can lead to situations with two versions of the truth. Consider a bank that has two servers storing the balance of an account. Suppose a network partition occurs and the backup assumes primary with the real primary still handling requests. The primary gets a request updating Account A’s balance to 120. The backup gets a request updating the same Account A’s balance to 80. Two different versions of the truth have now emerged. There are several algorithms that aim to resolve such inconsistences (version vectors, LWW, CRDT) but there are some domains where such methods fail. In systems that have a single leader (for example systems that implement the Raft protocol), each partition might end up electing it’s own leader. This again leads to the duplicate writes issue, where two separate servers handle write operations leading to two different versions of the truth.
 

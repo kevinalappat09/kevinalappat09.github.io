@@ -10,6 +10,8 @@ About Me
 - I like automating things in my life with software.
 - Studied at [VIT Vellore](https://vit.ac.in/).
 - I like cats. 
+- [My LinkedIn](https://www.linkedin.com/in/kevin-alappat-47b87a157/)
+- [My GitHub](https://github.com/kevinalappat09)
 
 About My Blogs
 - I like to write about things I learn.
