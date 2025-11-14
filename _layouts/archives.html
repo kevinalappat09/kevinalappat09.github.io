@@ -14,6 +14,9 @@ layout: default
                     {{ post.title | escape }}
                 </a>
             </h3>
+            {% if post.subtitle %}
+            <p class="post-subtitle">{{ post.subtitle | escape }}</p>
+            {% endif %}
         </li>
         {% endfor %}
     </ul>

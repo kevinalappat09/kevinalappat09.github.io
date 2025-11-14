@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "The Split Brain Problem"
+subtitle: "Understanding and Preventing Data Inconsistencies"
 date:   2025-11-14
 categories: distributed-systems consistency
 ---
