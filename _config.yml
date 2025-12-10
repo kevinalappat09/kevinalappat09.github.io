@@ -26,6 +26,7 @@ github_username:  kevinalappat09
 
 featured_posts:
   - _posts/2025-11-14-SplitBrain.md
+  - _posts/2025-12-10-Raft.md
 
 # Build settings
 theme: minima
