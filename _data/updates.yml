@@ -1,0 +1,14 @@
+- date: 2026-09-27
+  project: laxmi
+  kind: changelog
+  title: v1.0.0
+  items:
+    - Accounts for savings, checking, salary, credit, and investment
+    - Deposits, withdrawals, and transfers, with payees and categories
+    - Recurring transactions and SIPs
+    - Budgets by overall spending, account, category, or classification
+    - Reports for cash flow, budgets, portfolio, and credit cards
+    - Portfolio tracking for mutual funds, stocks, and ETFs, with price updates, allocation, and XIRR
+    - Credit cards with limits, utilization, and statement and payment reminders
+    - CSV import and export
+    - Home view with balances, income and spending, and reminders

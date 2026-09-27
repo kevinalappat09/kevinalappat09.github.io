@@ -1,0 +1,70 @@
+---
+layout: default
+---
+<div class="projects">
+    <h1 class="page-heading">Projects</h1>
+
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    {%- for project in site.data.projects -%}
+    <section class="project">
+        <h2>
+            {%- if project.url -%}
+            <a href="{{ project.url }}">{{ project.name | escape }}</a>
+            {%- else -%}
+            {{ project.name | escape }}
+            {%- endif -%}
+        </h2>
+        {%- if project.description -%}
+        <p>{{ project.description | escape }}</p>
+        {%- endif -%}
+
+        {%- assign project_updates = site.data.updates | where: "project", project.id | sort: "date" | reverse -%}
+        {%- assign announcements = project_updates | where: "kind", "announcement" -%}
+        {%- assign changelog = project_updates | where: "kind", "changelog" -%}
+
+        {%- if announcements.size > 0 -%}
+        <h3>Announcements</h3>
+        <ul class="post-list">
+            {%- for item in announcements -%}
+            <li>
+                <span class="post-meta">{{ item.date | date: date_format }}</span>
+                <h3>{{ item.title | escape }}</h3>
+                {%- if item.body -%}
+                <p class="post-subtitle">{{ item.body | escape }}</p>
+                {%- endif -%}
+                {%- if item.items.size > 0 -%}
+                <ul>
+                    {%- for point in item.items -%}
+                    <li>{{ point | escape }}</li>
+                    {%- endfor -%}
+                </ul>
+                {%- endif -%}
+            </li>
+            {%- endfor -%}
+        </ul>
+        {%- endif -%}
+
+        {%- if changelog.size > 0 -%}
+        <h3>Changelog</h3>
+        <ul class="post-list">
+            {%- for item in changelog -%}
+            <li>
+                <span class="post-meta">{{ item.date | date: date_format }}</span>
+                <h3>{{ item.title | escape }}</h3>
+                {%- if item.body -%}
+                <p class="post-subtitle">{{ item.body | escape }}</p>
+                {%- endif -%}
+                {%- if item.items.size > 0 -%}
+                <ul>
+                    {%- for point in item.items -%}
+                    <li>{{ point | escape }}</li>
+                    {%- endfor -%}
+                </ul>
+                {%- endif -%}
+            </li>
+            {%- endfor -%}
+        </ul>
+        {%- endif -%}
+    </section>
+    {%- endfor -%}
+</div>
