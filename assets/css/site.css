@@ -2,10 +2,17 @@
   --cream: #f6f1e6;
   --ink: #111111;
   --muted: #7a746c;
+  --code-paper: #fffaf3;
+}
+
+html {
+  font-size: 18px;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
   background-color: var(--cream);
   color: var(--ink);
 }
@@ -64,7 +71,7 @@ pre,
   line-height: 1.55;
   border: 1px solid #e6dccb;
   border-radius: 8px;
-  background-color: #fffaf3;
+  background-color: var(--code-paper);
   color: #3f3832;
 }
 
@@ -75,7 +82,7 @@ pre,
   border: 0;
   border-radius: 0;
   background: transparent;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.55;
   color: inherit;
   overflow: visible;
@@ -112,7 +119,20 @@ pre,
   user-select: none;
   color: #7a746c;
   border-right: 1px solid #eadfce;
-  background: #fffaf3;
+  background: var(--code-paper);
+}
+
+.post-content .highlighter-rouge,
+.post-content .highlighter-rouge .highlight,
+.post-content .highlighter-rouge pre,
+.post-content .highlighter-rouge table,
+.post-content .highlighter-rouge tr,
+.post-content .highlight td.rouge-code {
+  background-color: var(--code-paper);
+}
+
+.post-content .highlighter-rouge > .highlight {
+  border: 1px solid #e6dccb;
 }
 
 .highlight td.rouge-code {
